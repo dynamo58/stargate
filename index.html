@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/assets/images/gate.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <title>Gate guesser</title>
+    </head>
+    <body>
+        <main>
+            <h1 class="big">Gate Guesser</h1>
+            <div style="display: flex; gap: 0.5em; margin: 0 1em 0.5em 0">
+                <button id="daily">Daily</button>
+                <button id="practice">Practice</button>
+            </div>
+
+            <div>
+                <img id="image" src="/assets/images/placeholder.png" />
+            </div>
+
+            <div
+                style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0.5em 0.5em 0 0;
+                "
+            >
+                <div style="display: flex; gap: 1em; margin: 0.5em 0.5em 0 0">
+                    <select id="series">
+                        <option value="SG1">SG-1</option>
+                        <option value="SGA">SGA</option>
+                        <option value="SGU">SGU</option>
+                    </select>
+                    <select id="season">
+                        <option key="1" value="1">1</option>
+                        <option key="2" value="2">2</option>
+                    </select>
+                    <select id="episode">
+                        <option key="1" value="1">1</option>
+                        <option key="2" value="2">2</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="submit">Submit</button>
+                </div>
+            </div>
+        </main>
+
+        <dialog id="modal">
+            <button id="modal-close">Close</button>
+            <button autofocus id="modal-practice">More</button>
+            <div id="modal-content"></div>
+        </dialog>
+
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
+        <script>
+            VANTA.HALO({
+                el: "body",
+                minHeight: 200.0,
+                minWidth: 200.0,
+                backgroundColor: 0x10121e,
+                amplitudeFactor: 0.01,
+                size: 1,
+            });
+        </script>
+        <script src="/data.js"></script>
+        <script src="/index.js"></script>
+        <script>
+            new Game();
+        </script>
+    </body>
+</html>
