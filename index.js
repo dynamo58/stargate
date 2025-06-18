@@ -44,8 +44,11 @@ class Game {
       submitBtn: $("submit"),
       modalDiv: $("modal-content"),
       modalPracticeBtn: $("modal-practice"),
+      dailyNumber: $("day"),
     };
     this.gameImg = null;
+
+    this.ui.dailyNumber.innerText = getDay() - epoch + 1;
 
     this.ui.dailyBtn.onclick = () => {
       this.mode.set("daily");
