@@ -124,6 +124,8 @@ class Game {
       this.ui.practiceBtn.classList.add("is-active");
       this.ui.dailyBtn.classList.remove("is-active");
     }
+
+    this.startRound();
   }
 
   startRound() {
